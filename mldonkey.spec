@@ -23,6 +23,7 @@ Source8:	mldonkey_df_monitor.crond
 Source9:	mldonkey_df_monitor.sh
 Source10:	mlgui.sh
 Source11:	mldonkey.logrotate
+Patch1:		mldonkey-3.0.7-gcc46.patch
 URL:		http://sourceforge.net/projects/mldonkey/
 #http://www.nongnu.org/mldonkey
 Group:		System/Servers
@@ -89,14 +90,6 @@ all mldonkey operations. It gives details about conected servers,
 downloaded files, friends and lets one search for files in a pleasing
 way.
 
-%package chat
-Summary:	Graphical chat frontend for mldonkey based on GTK
-Group:		Networking/Other
-Requires:	%{name}-gui = %{epoch}:%{version}-%{release}
-
-%description chat
-A simple chat frontend for mldonkey based on GTK
-
 %package init
 Requires(pre):	rpm-helper
 Summary:	Init to launch mldonkey
@@ -128,6 +121,7 @@ You need to edit /etc/sysconfig/mldonkey_submit
 
 %prep
 %setup -q
+%patch1 -p1
 
 %build
 %configure2_5x --enable-gui
@@ -228,12 +222,6 @@ EOF
 %update_menus
 
 %postun gui
-%clean_menus
-
-%post chat
-%update_menus
-
-%postun chat
 %clean_menus
 
 %files
