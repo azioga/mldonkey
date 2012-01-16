@@ -1,6 +1,6 @@
 %define name	mldonkey
 %define summary	Door to the 'donkey' network
-%define version	3.0.7
+%define version	3.1.0
 %define rel	1
 
 %define release %mkrel %rel
@@ -23,7 +23,6 @@ Source8:	mldonkey_df_monitor.crond
 Source9:	mldonkey_df_monitor.sh
 Source10:	mlgui.sh
 Source11:	mldonkey.logrotate
-Patch1:		mldonkey-3.0.7-gcc46.patch
 URL:		http://sourceforge.net/projects/mldonkey/
 #http://www.nongnu.org/mldonkey
 Group:		System/Servers
@@ -121,7 +120,6 @@ You need to edit /etc/sysconfig/mldonkey_submit
 
 %prep
 %setup -q
-%patch1 -p1
 
 %build
 %configure2_5x --enable-gui
