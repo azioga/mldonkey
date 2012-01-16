@@ -1,14 +1,7 @@
-%define name	mldonkey
-%define summary	Door to the 'donkey' network
-%define version	3.1.0
-%define rel	1
-
-%define release %mkrel %rel
-
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Summary:	%{summary}
+Name:		mldonkey
+Version:	3.1.0
+Release:	1
+Summary:	Door to the 'donkey' network
 License:	GPLv2
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 #http://savannah.nongnu.org/download/mldonkey/%{name}-%{version}.tar.bz2
@@ -37,7 +30,6 @@ BuildRequires:	bzip2-devel
 BuildRequires:	magic-devel
 Epoch:		1
 Requires: 	netcat
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 MLDonkey is a door to the 'donkey' network, a decentralized network used to
@@ -273,4 +265,3 @@ EOF
 
 %clean
 rm -rf %{buildroot}
-
