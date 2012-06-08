@@ -1,5 +1,5 @@
 Name:		mldonkey
-Version:	3.1.0
+Version:	3.1.2
 Release:	1
 Summary:	Door to the 'donkey' network
 License:	GPLv2
