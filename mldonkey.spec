@@ -20,9 +20,9 @@ URL:		http://sourceforge.net/projects/mldonkey/
 #http://www.nongnu.org/mldonkey
 Group:		System/Servers
 BuildRequires:	camlp4
-BuildRequires:	libgd-devel
-BuildRequires:	libncurses-devel
-BuildRequires:	librsvg-devel
+BuildRequires:	gd-devel
+BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:  ocaml >= 3.10.2
 BuildRequires:	ocaml-findlib
 BuildRequires:	ocaml-lablgtk2-devel
