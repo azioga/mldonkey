@@ -100,7 +100,7 @@ it in your /etc/sysconfig/mldonkey, because mldonkey now stores them crypted.
 %package ed2k_submit
 Summary:	This tool gives you an easy way to add a ed2k-link
 Group:		Graphical desktop/KDE
-Requires:	kdebase
+Requires:	kdebase4-runtime
 Requires:	perl-libwww-perl
 
 %description ed2k_submit
