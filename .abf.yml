@@ -1,13 +1,2 @@
 sources:
-  "downloads.ini:"	8b6dfd9b00419354f5f5a8d8375070ed366690db
-  "mldonkey-3.1.2.tar.bz2:"	be8c261e2fbd365dd3866af15a854b074fbc59c1
-  "mldonkey_df_monitor.crond:"	1896d585e412765425a398fc6a33362bed8d989e
-  "mldonkey_df_monitor.sh:"	45468e71b7b45acb1353d6aef1db474bd4cc1fbd
-  "mldonkey-icon-16.png:"	2cf9871d67cf2a205b669dae403e8d7889eb82f7
-  "mldonkey-icon-32.png:"	588328d90be1f0e068338dc9999ff953ad4b95ec
-  "mldonkey-icon-48.png:"	8145710703a078c020c8bfd08897b8d35cf53ab2
-  "mldonkey.init:"	8da82b307b86db13319d589c2da8e0e5ca50b93a
-  "mldonkey.logrotate:"	9a8164820881804bb3e200a99b18ac5f11b16d1b
-  "mldonkey.sysconfig:"	a866fdaa95cc88c88b0c8edbfe9a0bafc526290e
-  "mlgui.sh:"	fa057e2e75149d13e386b6a6e973fcf54a09d78c
-  "mlnet.sh:"	5b04dfa7e69db10718be0b8e379484dc9514a046
+  "mldonkey-3.1.2.tar.bz2": be8c261e2fbd365dd3866af15a854b074fbc59c1

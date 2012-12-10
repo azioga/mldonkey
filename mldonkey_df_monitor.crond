@@ -1,0 +1,1 @@
+*/30 * * * *	root	/usr/lib/mldonkey/mldonkey_df_monitor.sh

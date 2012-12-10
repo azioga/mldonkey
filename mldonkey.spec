@@ -265,3 +265,40 @@ EOF
 
 %clean
 rm -rf %{buildroot}
+
+
+%changelog
+* Fri Jun 08 2012 Bernhard Rosenkraenzer <bero@bero.eu> 1:3.1.2-1
++ Revision: 803350
+- Fix BuildRequires: to not install 32bit code on x86_64
+- Fix unresolvable "kdebase" dependency in ed2k-submit
+- Update to 3.1.2
+
+* Mon Jan 16 2012 Bernhard Rosenkraenzer <bero@bero.eu> 1:3.1.0-1
++ Revision: 761807
+- Clean up spec file
+- Update to 3.1.0
+
+* Fri Aug 05 2011 Andrey Bondrov <abondrov@mandriva.org> 1:3.0.7-1
++ Revision: 693323
+- Add patch1 to fix gcc-4.6 build. Drop obsoleted chat package.
+- imported package mldonkey
+
+
+* Sat Jul 23 2011 Andrey Bondrov <bondrov@math.dvgu.ru> 1:3.0.7-1mdv2011.0
+- New version 3.0.7
+- Import from PLF
+- Remove PLF reference
+
+* Sat Oct 31 2009 Guillaume Rousse <guillomovitch@zarb.org> 1:3.0.1-1plf2010.0
+- new version
+- drop old configure patch
+- drop old menu entry
+- add libmagic support
+- fix #250:
+ - fix '%%{_localstatedir}' semantic change
+ - fix log file handling in initscript
+
+* Sun Mar 01 2009 Stefan van der Eijk <stefan@zarb.org> 1:3.0.0-1plf2009.1
+- 3.0.0
+- fix netcat dependency
