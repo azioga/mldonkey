@@ -114,7 +114,13 @@ You need to edit /etc/sysconfig/mldonkey_submit
 %setup -q
 
 %build
-%configure2_5x --enable-gui
+# Looks like autoconf, but isn't -- don't use the
+# %%configure macros
+CFLAGS="%optflags" CXXFLAGS="%optflags" \
+./configure \
+	--prefix=%_prefix \
+	--libdir=%_libdir \
+	--enable-gui
 %make
 
 %install
