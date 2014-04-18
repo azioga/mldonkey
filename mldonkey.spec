@@ -1,6 +1,6 @@
 Name:		mldonkey
-Version:	3.1.3
-Release:	2
+Version:	3.1.5
+Release:	1
 Summary:	Door to the 'donkey' network
 License:	GPLv2
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
