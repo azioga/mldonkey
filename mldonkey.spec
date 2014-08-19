@@ -1,7 +1,7 @@
 Summary:	Door to the 'donkey' network
 Name:		mldonkey
 Version:	3.1.5
-Release:	5
+Release:	6
 Epoch:		1
 License:	GPLv2+
 Group:		System/Servers
