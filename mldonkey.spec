@@ -139,25 +139,14 @@ it in your /etc/sysconfig/mldonkey, because mldonkey now stores them crypted.
 %_pre_useradd %{name} %{_localstatedir}/lib/%{name} /bin/bash
 
 %post init
-if [ $1 -eq 1 ] ; then 
-    # Initial installation 
-    /bin/systemctl daemon-reload >/dev/null 2>&1 || :
-fi
+%systemd_post %{name}.service
 %create_ghostfile /var/log/%{name}.log mldonkey mldonkey 0644
 
 %preun init
-if [ $1 -eq 0 ] ; then
-    # Package removal, not upgrade
-    /bin/systemctl --no-reload disable mldonkey.service > /dev/null 2>&1 || :
-    /bin/systemctl stop mldonkey.service > /dev/null 2>&1 || :
-fi
+%systemd_preun %{name}.service
 
 %postun init
-/bin/systemctl daemon-reload >/dev/null 2>&1 || :
-if [ $1 -ge 1 ] ; then
-    # Package upgrade, not uninstall
-    /bin/systemctl try-restart mldonkey.service >/dev/null 2>&1 || :
-fi
+%systemd_postun_with_restart %{name}.service
 %_postun_userdel %{name}
 
 #----------------------------------------------------------------------------
@@ -266,7 +255,9 @@ install -d -m 755 %{buildroot}%{_datadir}/applications/
 cat << EOF > %{buildroot}%{_datadir}/applications/%{name}-gui.desktop
 [Desktop Entry]
 Name=Mldonkey GUI
+Name[ru]=Mldonkey GUI
 Comment=Download files with Mldonkey
+Comment[ru]=Закачка файлов с помощью Mldonkey
 Exec=%{_bindir}/mlgui
 Icon=%{name}
 Terminal=false
