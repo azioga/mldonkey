@@ -1,0 +1,12 @@
+[Unit]
+Description=Mldonkey is client to access multiple peer-to-peer network
+After=network.target
+
+[Service]
+User=mldonkey
+Environment=MLDONKEY_DIR=/var/lib/mldonkey
+EnvironmentFile=-/etc/sysconfig/mldonkey
+ExecStart=/usr/lib/mldonkey/mlnet -run_as_user mldonkey -log_file /var/log/mldonkey.log
+
+[Install]
+WantedBy=multi-user.target  
