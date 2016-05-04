@@ -8,9 +8,9 @@ Group:		System/Servers
 Url:		http://sourceforge.net/projects/mldonkey/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 #http://savannah.nongnu.org/download/mldonkey/%{name}-%{version}.tar.bz2
-Source1:	%{name}-icon-16.png
-Source2:	%{name}-icon-32.png
-Source3:	%{name}-icon-48.png
+#Source1:	%{name}-icon-16.png
+#Source2:	%{name}-icon-32.png
+#Source3:	%{name}-icon-48.png
 Source4:	%{name}.service
 Source5:	downloads.ini
 Source6:	%{name}.sysconfig
