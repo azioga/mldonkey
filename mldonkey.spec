@@ -19,7 +19,7 @@ Source8:	mldonkey_df_monitor.crond
 Source9:	mldonkey_df_monitor.sh
 Source10:	mlgui.sh
 Source11:	mldonkey.logrotate
-BuildRequires:	camlp4
+BuildRequires:	ocaml-camlp4-devel
 BuildRequires:	ocaml
 BuildRequires:	ocaml-findlib
 BuildRequires:	ocaml-lablgtk2-devel
